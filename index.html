@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Rock paper scissors</title>
+		<link rel="stylesheet" href="./css/style.css">
+		<script src="./js/vanilla.js"></script>
+	</head>
+	<body>
+		<div id="main-app">
+			<div class="index-page bg-white window-height window-width column items-center">
+				<div id="user_select" class="banner bg-primary flex items-center justify-center">
+					<!--RPS-->
+					<i id="rock">blur_circular</i>
+					<i id="paper">insert_drive_file</i>
+					<i id="scissors">content_cut</i>
+				</div>
+				<div class="text-center">
+					<div class="card bg-grey-2 shadow-3 column items-center justify-center group">
+						<h1 id="title" class="text-primary">Rock Paper Scissors</h1>
+						
+						<div id="msg" class="animate-fade hidden">Now make a choice above.</div>
+						
+						
+						<button id="btn_start"  class="full-width primary push animate-fade hidden"><i class="on-left">play_circle_outline</i>Play</button>
+						
+						<table id="results" class="quasar-table striped full-width hidden">
+						  <thead>
+							<tr>
+							  <th><i>face</i> Player</th>
+							  <th><i>computer</i> Computer</th>
+							  <th>Outcome</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <td><i>blur_circular</i></td>
+							  <td><i>content_cut</i></td>
+							  <td style="color:red"><i>close</i></td>
+							</tr>
+							<tr>
+							  <td><i>content_cut</i></td>
+							  <td><i>blur_circular</i></td>
+							  <td style="color:green"><i>check</i></td>
+							</tr>
+						  </tbody>
+						</table>
+						
+						
+						<button id="btn_reset" class="full-width primary push"><i class="on-left">refresh</i> Reset</button>
+
+						
+						<div id="no_support">Your browser does not support all the features for the app to run.</div>
+												
+
+
+						<button id="btn_devby" class="grey clear"><i class="on-left">launch</i>Developed by &copy; Matthew Bull 2016</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

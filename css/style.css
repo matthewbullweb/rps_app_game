@@ -1,0 +1,3 @@
+@import url(layout.css);
+/* the layout css is imported - add your own styles after this line to override */
+.index-page .banner {font-size: 15vmax;}
