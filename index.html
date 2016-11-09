@@ -19,7 +19,7 @@
 					<div class="card bg-grey-2 shadow-3 column items-center justify-center group">
 						<h1 id="title" class="text-primary">Rock Paper Scissors</h1>
 						
-						<div id="msg" class="animate-fade hidden">Now make a choice above.<br />Wins are shown below</div>
+						<div id="msg" class="animate-fade hidden"></div>
 						
 						<button id="btn_start"  class="full-width primary push animate-fade hidden"><i class="on-left">play_circle_outline</i>Play</button>
 						
@@ -27,17 +27,18 @@
 						  <thead>
 							<tr>
 							  <th><i>face</i> Player</th>
+							  <th><i>bookmark</i> Tie</th>
 							  <th><i>computer</i> Computer</th>
 							</tr>
 						  </thead>
 						  <tbody>
 							<tr>
 							  <td id="player_counter">0</td>
+							  <td id="tie_counter">0</td>
 							  <td id="computer_counter">0</td>
 							</tr>
 						  </tbody>
 						</table>
-						
 						
 						<button id="btn_reset" class="full-width primary push"><i class="on-left">refresh</i> Reset</button>
 
