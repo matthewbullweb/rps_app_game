@@ -1,5 +1,5 @@
 //place ids for elements that need to be accessed
-var objs = ['no_support','btn_start','btn_reset','btn_devby','user_select','msg','rock','paper','scissors','title','results','player_counter','tie_counter','computer_counter'];
+var objs = ['no_support','btn_start','btn_reset','btn_devby','user_select','msg','Rock','Paper','Scissors','title','results','player_counter','tie_counter','computer_counter'];
 //values to place in local storage - add later as game is more important
 var data = [{'in_progress':0,'player_wins':0,'ties':0,'computer_wins':0}];
 var player_wins = 0; ties = 0; computer_wins = 0;
@@ -67,53 +67,53 @@ function pickRandomNumber(){
 
 
 function choiceClick(e){
-	var c = ['rock','paper','scissors'];
+	var c = ['Rock','Paper','Scissors'];
 	var computer = c[pickRandomNumber()];
 	var o; // o for outcome
 	
 	//use a switch case
 	switch(this.id) {
-		case "rock":
-		  if(computer == "rock") {
-			  o = 'tie';
+		case "Rock":
+		  if(computer == "Rock") {
+			  o = 'Tie';
 		  }
-		  if(computer == "paper") {
-			  o = 'lose';
+		  if(computer == "Paper") {
+			  o = 'Lose';
 		  }
-		  if(computer == "scissors") {
-			  o = 'win';
+		  if(computer == "Scissors") {
+			  o = 'Win';
 		  }
 		 break;
-		case "paper":
-		  if(computer == "rock") {
-			  o = 'win';
+		case "Paper":
+		  if(computer == "Rock") {
+			  o = 'Win';
 		  }
-		  if(computer == "paper") {
-			  o = 'tie';
+		  if(computer == "Paper") {
+			  o = 'Tie';
 		  }
-		  if(computer == "scissors") {
-			  o = 'lose';
+		  if(computer == "Scissors") {
+			  o = 'Lose';
 		  }
 		 break; 
-		case "scissors":
-		  if(computer == "rock") {
-			   o = 'lose';
+		case "Scissors":
+		  if(computer == "Rock") {
+			   o = 'Lose';
 		  }
-		  if(computer == "paper") {
-			  o = 'win';
+		  if(computer == "Paper") {
+			  o = 'Win';
 		  }
-		  if(computer == "scissors") {
-			  o = 'tie';
+		  if(computer == "Scissors") {
+			  o = 'Tie';
 		  }
 		 break; 
 	}
 	
-	var txt = 'Player:' + this.id + ', Computer: ' + computer + '\n<br/>Player outcome: ' + o, playagain = "\n<br/>Make another choise", overall = "";
+	var txt = 'Player: ' + this.id + ', Computer: ' + computer + '\n<br/>Player outcome: ' + o, playagain = "\n<br/>Make another choice", overall = "";
 	
 	//update counter and display results
-	if(o=='win') {data[0].player_wins++; objs.player_counter.innerHTML = data[0].player_wins;}
-	if(o=='tie') {data[0].ties++; objs.tie_counter.innerHTML = data[0].ties;}
-	if(o=='lose') {data[0].computer_wins++; objs.computer_counter.innerHTML = data[0].computer_wins;}
+	if(o=='Win') {data[0].player_wins++; objs.player_counter.innerHTML = data[0].player_wins;}
+	if(o=='Tie') {data[0].ties++; objs.tie_counter.innerHTML = data[0].ties;}
+	if(o=='Lose') {data[0].computer_wins++; objs.computer_counter.innerHTML = data[0].computer_wins;}
 	
 	//decide on overall winner - disable choices then as game finishes
 	if(data[0].player_wins>=3) { playagain = ''; overall = '\n<br/><b>Player wins overall</b>'; enableChoice(false); }
@@ -135,17 +135,17 @@ function enableChoice(s){
 		objs.user_select.style.color = 'hsla(0,0%,100%,1)';
 		
 		//enable click
-		objs.rock.addEventListener('click', choiceClick, false);
-		objs.paper.addEventListener('click', choiceClick, false);
-		objs.scissors.addEventListener('click', choiceClick, false);
+		objs.Rock.addEventListener('click', choiceClick, false);
+		objs.Paper.addEventListener('click', choiceClick, false);
+		objs.Scissors.addEventListener('click', choiceClick, false);
 		
 	} else {
 		objs.user_select.style.color = 'hsla(0,0%,100%,.2)';
 		
 		//disable click
-		objs.paper.removeEventListener('click', choiceClick, false);
-		objs.rock.removeEventListener('click', choiceClick, false);
-		objs.scissors.removeEventListener('click', choiceClick, false);
+		objs.Paper.removeEventListener('click', choiceClick, false);
+		objs.Rock.removeEventListener('click', choiceClick, false);
+		objs.Scissors.removeEventListener('click', choiceClick, false);
 	}
 }
 
